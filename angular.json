@@ -31,7 +31,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/assets/estilos/xim-app.scss"
             ],
             "scripts": []
           },
@@ -99,7 +100,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/assets/estilos/xim-app.scss",
+              "src/assets/fonts/Roboto.css",
+              "src/assets/fonts/Montserrat.css",
+              "src/assets/fonts/MaterialIcons.css"
             ],
             "scripts": []
           }

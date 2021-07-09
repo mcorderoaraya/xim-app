@@ -1,0 +1,27 @@
+﻿// src/assets/estilos/tema/_xim-init.scss
+
+@use "sass:map";
+
+@use '~@angular/material' as mat;
+@use 'xim-tema' as xim;
+
+@include mat.core();
+
+$xim-fontConfig: $xim-theme;
+$typography-config: mat.get-typography-config($xim-fontConfig);
+
+$color-config:    mat.get-color-config($xim-theme);
+$primary-palette: map.get($color-config, 'primary');
+$accent-palette:  map.get($color-config, 'accent');
+$warn-palette:    map.get($color-config, 'warn');
+$is-dark-theme:   map.get($color-config, 'is-dark');
+
+@include mat.all-component-themes($xim-fontConfig);
+
+$my-custom-level: mat.define-typography-level(
+  $font-family: Roboto,
+  $font-weight: 400,
+  $font-size: 1rem,
+  $line-height: 1,
+  $letter-spacing: normal,
+);

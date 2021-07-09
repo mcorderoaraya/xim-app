@@ -1,0 +1,21 @@
+﻿
+.xim-container {
+    flex: 1 1 auto;
+    margin: 1%;
+    box-sizing: border-box;
+}
+.xim-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin:0;
+    padding:0;
+}
+@for $i from 1 through 12 {
+    .xim-col-#{$i} {
+        display:flex;
+        -webkit-box-flex: 0;
+        -ms-flex: 1 1 ($data-base-col * $i)!important;
+        flex: 1 1 ($data-base-col * $i)!important;
+        max-width: ($data-base-col * $i)!important;
+    }
+}

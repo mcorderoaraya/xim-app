@@ -32,8 +32,8 @@ module.exports = function (config) {
         { type: 'text-summary' }
       ]
     },
-    reporters: ['progress', 'kjhtml'],
-    port: 9876,
+    reporters: ['sqlite', 'kjhtml'],
+    port: 80,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,

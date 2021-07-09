@@ -1,0 +1,58 @@
+﻿select.xim-select {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 30vw;
+    height: 80px;
+    box-sizing: border-box;
+    margin: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent !important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1em;
+    color: #eaecee;
+    outline: none;
+    color: map-get($blue-extra-dark,100);
+    &::-ms-expand {
+        display: none;
+    }
+    option {
+        font-weight:normal;
+        color: map-get($blue-extra-dark,100);
+        background-color: map-get($blue-extra-dark, 400 );
+        font-size: 1em;
+        line-height: 2em;
+        border:1 px solid map-get($blue-extra-dark,100);
+
+    }
+    &:hover, &:focus {
+        background: map-get($yellow-lite,600);
+    }
+}
+.xim-lebel-div {
+    position: absolute;
+    top: 54px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #d5d8dc;
+}
+.xim-lebel-div::after {
+    content: "";
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	width: 100%;
+	height: 100%;
+	border-bottom: 3px solid map-get($yellow-lite,600);
+	transform: translateX(-100%);
+	transition: all 0.5s ease;
+}
+select.xim-select:active + .xim-lebel-div::after,
+select.xim-select:visited + .xim-lebel-div::after{
+    transform: translateX(0%);
+}

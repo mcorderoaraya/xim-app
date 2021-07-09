@@ -1,0 +1,37 @@
+﻿
+// src/assets/estilos/mixin/_xim_mixin.scss
+
+@import '../variables/xim-variable';
+@import '../variables/xim-color';
+
+
+
+@mixin make-container() {
+    width: 100%;
+    padding-right: ($grid-gutter-width / 2);
+    padding-left: ($grid-gutter-width / 2);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin color-opacity($color, $opacity: .3) {
+    background: rgba($color, $opacity);
+}
+
+@mixin clearfix() {
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+
+$i: 0;
+@each $nombre, $valor in $red-dark {
+
+    .xim-bg-#{$i} {
+        background-color: $valor;
+    }
+    $i: ($i+1);
+}
+
